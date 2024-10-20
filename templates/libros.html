@@ -1,0 +1,59 @@
+{% extends "layout.html"  %}
+
+{% block content %}
+<main>
+    <div class="row g-8">
+        <div class="py-9 text-center">
+            <img class="d-block mx-auto mb-4" src="static/img/creadicon.png" alt="" width="72">
+            <h3 class="mb-3">Registro de libro</h3>
+            <form class="needs-validation col-3" novalidate="" method="POST">
+                <hr class="my-4">
+                <div class="row g-3">
+                    <div class="col-12">
+                        <label for="titulo" class="form-label">Titulo</label>
+                        <input type="text" class="form-control" id="titulo" name="titulo"  placeholder="" required>
+                        <div class="invalid-feedback">
+                            Se requiere un dato válido.
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="autor" class="form-label">Autor</label>
+                        <input type="text" class="form-control" id="autor" name="autor" placeholder="" required>
+                        <div class="invalid-feedback">
+                            Se requiere un dato válido.
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="resumen" class="form-label">Resumen </label>
+                        <textarea class="form-control" id="resumen" name="resumen" required></textarea>
+                        <div class="invalid-feedback">
+                            Se requiere un dato válido.
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <h4 class="mb-3">Medio</h4>
+
+                <div class="my-3">
+                    <div class="form-check">
+                        <input type="radio" id="fisico" name="formato" value="Físico" class="form-check-input" checked="" required>
+                        <label class="form-check-label" for="credit">Fisico</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" id="magnetico" name="formato" value="Magnético" class="form-check-input" required>
+                        <label class="form-check-label" for="debit">Magnetico</label>
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <button class="w-100 btn btn-primary btn-lg" type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+  </main>
+{% endblock %}

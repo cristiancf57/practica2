@@ -1,0 +1,50 @@
+{% extends "layout.html"  %}
+
+{% block content %}
+<main>
+    <div class="row g-8">
+        <div class="py-9 text-center">
+            <img class="d-block mx-auto mb-4" src="static/img/creadicon.png" alt="" width="72">
+            <h3 class="mb-3">Registro de Usuario</h3>
+            <form class="needs-validation col-3" novalidate="" method="POST">
+                <hr class="my-4">
+                <div class="row g-3">
+                    <div class="col-12">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="" required>
+                        <div class="invalid-feedback">
+                            Se requiere un dato válido.
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="apellido" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="apellido" name="apellido" placeholder="" required>
+                        <div class="invalid-feedback">
+                            Se requiere un dato válido.
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="correo" class="form-label">Email <span class="text-body-secondary">(Optional)</span></label>
+                        <input type="email" class="form-control" id="correo" name="correo" placeholder="you@example.com">
+                        <div class="invalid-feedback">
+                            Se requiere un dato válido.
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="contrasena" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="" required>
+                        <div class="invalid-feedback">
+                            Se requiere un dato válido.
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-4">
+                <button class="w-100 btn btn-primary btn-lg" type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+  </main>
+{% endblock %}

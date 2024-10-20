@@ -1,0 +1,17 @@
+
+{% extends "layout.html"  %}
+
+{% block content %}
+<div class="row g-8">
+    <div class="py-9 text-center">
+        <h4 class="display-4 fw-bold text-body-emphasis">{{ form }}</h4>
+        <ul>
+            {% for key, value in data.items() %}
+                <li>{{ key | capitalize }}: {{ value }}</li>
+            {% endfor %}
+        </ul>
+        <a href="{{ url_for('home') }}">Volver al Menú</a>
+    </div>    
+</div>
+
+{% endblock %}
